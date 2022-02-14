@@ -14,10 +14,12 @@
     <thead>
         <tr>
             <th>Name</th>
+            <th>Description</th>
         </tr>
     </thead>
-    <tr th:each="event : ${events}">
+    <tr th:each="event : ${events.keySet()}">
         <td th:text="${event}"></td>
+        <td th:text="${events.get(event)}"></td>
     </tr>
 </table>
 
